@@ -23,5 +23,29 @@
       <attribute name="multipleCarets">false</attribute>
       <attribute name="bitbucket">cloud</attribute>
     </event>
+    <event name="OpenFile" place="ChangesBrowser" timestamp="2020-01-28T15:16:48.755Z">
+      <attribute name="editor">false</attribute>
+      <attribute name="multipleLines">false</attribute>
+      <attribute name="multipleCarets">false</attribute>
+      <attribute name="bitbucket">cloud</attribute>
+    </event>
+    <event name="CopyLinkToFile" place="ChangesBrowser" timestamp="2020-01-28T15:17:03.541Z">
+      <attribute name="editor">false</attribute>
+      <attribute name="multipleLines">false</attribute>
+      <attribute name="multipleCarets">false</attribute>
+      <attribute name="bitbucket">cloud</attribute>
+    </event>
+    <event name="CopyLinkToFile" place="EditorPopup" timestamp="2020-01-28T15:18:32.583Z">
+      <attribute name="editor">true</attribute>
+      <attribute name="multipleLines">true</attribute>
+      <attribute name="multipleCarets">false</attribute>
+      <attribute name="bitbucket">cloud</attribute>
+    </event>
+    <event name="CopyLinkToFile" place="EditorPopup" timestamp="2020-01-28T15:18:34.967Z">
+      <attribute name="editor">true</attribute>
+      <attribute name="multipleLines">true</attribute>
+      <attribute name="multipleCarets">false</attribute>
+      <attribute name="bitbucket">cloud</attribute>
+    </event>
   </component>
 </application>
