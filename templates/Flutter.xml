@@ -2,6 +2,5 @@
   <template name="scfAppBar" value="return Scaffold(&#10;appBar: AppBar(&#10;title: Text('$appbarTitle$'),&#10;),&#10;body: $body$&#10;);" description="New Scaffold with AppBar" toReformat="false" toShortenFQNames="true">
     <variable name="appbarTitle" expression="&quot;appbarTitle&quot;" defaultValue="" alwaysStopAt="true" />
     <variable name="body" expression="&quot;bodyWidget&quot;" defaultValue="" alwaysStopAt="true" />
-    <context />
   </template>
 </templateSet>
