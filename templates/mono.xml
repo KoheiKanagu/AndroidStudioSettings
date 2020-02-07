@@ -1,0 +1,3 @@
+<templateSet group="mono">
+  <template name="asdf" value="asdfasdf" description="asdf" toReformat="false" toShortenFQNames="true" />
+</templateSet>
