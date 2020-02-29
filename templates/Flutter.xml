@@ -60,9 +60,9 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="valuenotifier" value="import 'package:flutter/foundation.dart';&#10;&#10;class $NAME$&#10;    extends ValueNotifier&lt;$STATUS$&gt; {&#10;  $NAME$() : super(const $STATUS$.still());&#10;  &#10;  $END$&#10;}&#10;" description="ValueNotifierテンプレ" toReformat="true" toShortenFQNames="true">
-    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="STATUS" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="valuenotifier" value="import 'package:flutter/foundation.dart';&#10;&#10;class $NAME$&#10;    extends ValueNotifier&lt;$STATE$&gt; {&#10;  $NAME$() : super(const $STATE$.still());&#10;  &#10;  $END$&#10;}&#10;" description="ValueNotifierテンプレ" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
+    <variable name="STATE" expression="regularExpression(capitalize(camelCase(fileNameWithoutExtension())), &quot;Notifier&quot;, &quot;State&quot;)" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
     </context>
