@@ -32,8 +32,8 @@
     </context>
   </template>
   <template name="flpg" value="import 'package:flutter/material.dart';&#10;&#10;class $NAME$Page extends StatelessWidget {&#10;  const $NAME$Page({ Key key }): super(key: key);&#10;&#10;  static const routeName = '/$NAME_SNAKE$';&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold($END$);&#10;  }&#10;}&#10;" description="New Page widget" toReformat="false" toShortenFQNames="true">
-    <variable name="NAME" expression="regularExpression(capitalize(camelCase(fileNameWithoutExtension())), &quot;Page&quot;, &quot;&quot;) " defaultValue="" alwaysStopAt="true" />
-    <variable name="NAME_SNAKE" expression="snakeCase(fileNameWithoutExtension())" defaultValue="" alwaysStopAt="false" />
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME_SNAKE" expression="snakeCase(NAME)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
     </context>
@@ -74,10 +74,15 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="statelesswidget" value="import 'package:flutter/material.dart';&#10;&#10;class $NAME$ extends StatelessWidget {&#10;  const $NAME$({ Key key }): super(key: key);&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Container($END$);&#10;  }&#10;}&#10;" description="StatelessWidgetテンプレ" toReformat="false" toShortenFQNames="true">
+  <template name="statelesswidget" value="import 'package:flutter/material.dart';&#10;&#10;class $NAME$ extends StatelessWidget {&#10;  const $NAME$({Key key}) : super(key: key);&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Container($END$);&#10;  }&#10;}&#10;" description="StatelessWidgetテンプレ" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="changenotifierprovider" value="ChangeNotifierProvider(&#10;  create: (_) =&gt; $END$,&#10;  child: Widget(),&#10;),&#10;" description="ChangeNotifierProviderのテンプレ" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
     </context>
   </template>
 </templateSet>
