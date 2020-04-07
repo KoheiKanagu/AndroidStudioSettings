@@ -31,7 +31,7 @@
       <option name="FLUTTER" value="true" />
     </context>
   </template>
-  <template name="flpg" value="import 'package:flutter/material.dart';&#10;&#10;class $NAME$Page extends StatelessWidget {&#10;  const $NAME$Page({ Key key }): super(key: key);&#10;&#10;  static const routeName = '/$NAME_SNAKE$';&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold($END$);&#10;  }&#10;}&#10;" description="New Page widget" toReformat="false" toShortenFQNames="true">
+  <template name="flpg" value="import 'package:flutter/material.dart';&#10;&#10;class $NAME$Page extends StatelessWidget {&#10;  const $NAME$Page({ Key key }): super(key: key);&#10;&#10;  static const routeName = '/$NAME_SNAKE$';&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold($END$);&#10;  }&#10;}&#10;" description="新規Pageテンプレ" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME_SNAKE" expression="snakeCase(NAME)" defaultValue="" alwaysStopAt="false" />
     <context>
@@ -80,7 +80,9 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="changenotifierprovider" value="ChangeNotifierProvider(&#10;  create: (_) =&gt; $END$,&#10;  child: Widget(),&#10;),&#10;" description="ChangeNotifierProviderのテンプレ" toReformat="false" toShortenFQNames="true">
+  <template name="statenotifier" value="import 'package:flutter/foundation.dart';&#10;import 'package:freezed_annotation/freezed_annotation.dart';&#10;import 'package:state_notifier/state_notifier.dart';&#10;&#10;part '$NAME_SNAKE$_state.freezed.dart';&#10;&#10;@freezed&#10;abstract class $NAME$State with _$$$NAME$State {&#10;  const factory $NAME$State({}) = _$NAME$State;&#10;}&#10;&#10;class $NAME$StateNotifier extends StateNotifier&lt;$NAME$State&gt; {&#10;  $NAME$StateNotifier() : super(const $NAME$State()) {}&#10;}" description="StateNotifierのテンプレ" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME_SNAKE" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(camelCase(fileNameWithoutExtension())) " defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
