@@ -4,7 +4,6 @@
       <mapping pattern="fetchFirebaseAppConfiguration" type="PLAIN_TEXT" />
       <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
       <mapping ext="apns" type="PLAIN_TEXT" />
-      <mapping ext="arb" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
