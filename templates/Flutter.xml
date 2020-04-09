@@ -87,4 +87,10 @@
       <option name="DART" value="true" />
     </context>
   </template>
+  <template name="test" value="import 'package:test/test.dart';&#10;&#10;void main() {&#10;  test('$TEST$', () async {&#10;    $END$&#10;  });&#10;}&#10;" description="Unitテストのテンプレ" toReformat="false" toShortenFQNames="true">
+    <variable name="TEST" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
 </templateSet>
