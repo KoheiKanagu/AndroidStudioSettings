@@ -1,0 +1,8 @@
+<templateSet group="Dart">
+  <template name="class" value="class $NAME$ {&#10;  $END$&#10;}&#10;" description="普通のクラスのテンプレ" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+</templateSet>
