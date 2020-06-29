@@ -107,4 +107,10 @@
       <option name="DART" value="true" />
     </context>
   </template>
+  <template name="push" value="Navigator.of(context).push(&#10;  MaterialPageRoute(&#10;    builder: (_) =&gt; const $NAME$(),&#10;    settings: RouteSettings(&#10;      name: $NAME$.routeName,&#10;    ),&#10;  ),&#10;);&#10;" description="Pushする" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
 </templateSet>
