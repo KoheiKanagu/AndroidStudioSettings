@@ -107,8 +107,15 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="push" value="Navigator.of(context).push(&#10;  MaterialPageRoute(&#10;    builder: (_) =&gt; const $NAME$(),&#10;    settings: RouteSettings(&#10;      name: $NAME$.routeName,&#10;    ),&#10;  ),&#10;);&#10;" description="Pushする" toReformat="false" toShortenFQNames="true">
+  <template name="push" value="Navigator.of(context).push(&#10;  MaterialPageRoute(&#10;    builder: (_) =&gt; const $NAME$(),&#10;    settings: const RouteSettings(&#10;      name: $NAME$.routeName,&#10;    ),&#10;  ),&#10;);&#10;" description="Pushする" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="tojson" value="part '$NAME_SNAKE$.g.dart';&#10;&#10;factory $NAME$.fromJson(Map&lt;String, dynamic&gt; json) =&gt;&#10;  _$$$NAME$FromJson(json);&#10;&#10;Map&lt;String, dynamic&gt; toJson() =&gt; _$$$NAME$ToJson(this);&#10;" description="Json化のテンプレ" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME_SNAKE" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <variable name="NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
