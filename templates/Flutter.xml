@@ -87,8 +87,7 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="test" value="import 'package:test/test.dart';&#10;&#10;void main() {&#10;  test('$TEST$', () async {&#10;    $END$&#10;  });&#10;}&#10;" description="Unitテストのテンプレ" toReformat="false" toShortenFQNames="true">
-    <variable name="TEST" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="testWithMain" value="import 'package:test/test.dart';&#10;&#10;void main() {&#10;  test('$END$', () async {&#10;  });&#10;}&#10;" description="Unitテスト全体のテンプレ" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="DART" value="true" />
     </context>
@@ -118,6 +117,11 @@
     <variable name="NAME_SNAKE" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="test" value="test('$END$', () async {&#10;});&#10;" description="Unitテストのテンプレ" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
     </context>
   </template>
 </templateSet>
