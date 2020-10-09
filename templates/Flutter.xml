@@ -112,7 +112,7 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="freezed" value="import 'package:flutter/foundation.dart';&#10;import 'package:freezed_annotation/freezed_annotation.dart';&#10;&#10;part '$NAME_SNAKE$.freezed.dart';&#10;&#10;@freezed&#10;abstract class $NAME$ with _$$$NAME$ {&#10;  const factory $NAME$({&#10;   $END$&#10;  }) = _$NAME$;&#10;}" description="Freezedテンプレ" toReformat="false" toShortenFQNames="true">
+  <template name="freezed" value="import 'package:freezed_annotation/freezed_annotation.dart';&#10;&#10;part '$NAME_SNAKE$.freezed.dart';&#10;&#10;@freezed&#10;abstract class $NAME$ with _$$$NAME$ {&#10;  const factory $NAME$({&#10;   $END$&#10;  }) = _$NAME$;&#10;}" description="Freezedテンプレ" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="" alwaysStopAt="false" />
     <variable name="NAME_SNAKE" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
     <context>
