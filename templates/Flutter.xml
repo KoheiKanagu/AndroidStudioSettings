@@ -92,9 +92,8 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="pushwithstatenotifier" value="Navigator.of(context).push(&#10;  MaterialPageRoute(&#10;    builder: (_) =&gt; StateNotifierProvider&lt;$NAME$Controller, $NAME$State&gt;(&#10;      create: (_) =&gt; $NAME$Controller(),&#10;      child: const $PAGE_NAME$Page(),&#10;    ),&#10;    settings: RouteSettings(name: $PAGE_NAME$Page.routeName),&#10;  ),&#10;);&#10;" description="StateNotifierProviderで包んでPushする" toReformat="false" toShortenFQNames="true">
+  <template name="pushwithstatenotifier" value="Navigator.of(context).push(&#10;  MaterialPageRoute(&#10;    builder: (_) =&gt; StateNotifierProvider&lt;$NAME$Controller, $NAME$State&gt;(&#10;      create: (_) =&gt; $NAME$Controller(),&#10;      child: const $NAME$Page(),&#10;    ),&#10;    settings: RouteSettings(name: $NAME$Page.routeName),&#10;  ),&#10;);&#10;" description="StateNotifierProviderで包んでPushする" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="PAGE_NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
