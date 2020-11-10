@@ -80,7 +80,7 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="statenotifier" value="import 'package:flutter/foundation.dart';&#10;import 'package:freezed_annotation/freezed_annotation.dart';&#10;import 'package:state_notifier/state_notifier.dart';&#10;&#10;import '$NAME_SNAKE$_state.dart';&#10;&#10;class $NAME$Controller extends StateNotifier&lt;$NAME$State&gt; with LocatorMixin {&#10;  $NAME$Controller() : super($NAME$State()) {&#10;    $END$&#10;  }&#10;}" description="StateNotifierのテンプレ" toReformat="false" toShortenFQNames="true">
+  <template name="statenotifier" value="import 'package:flutter/foundation.dart';&#10;import 'package:freezed_annotation/freezed_annotation.dart';&#10;&#10;import '$NAME_SNAKE$_state.dart';&#10;&#10;class $NAME$Controller extends StateNotifier&lt;$NAME$State&gt; {&#10;  $NAME$Controller() : super($NAME$State()) {&#10;    $END$&#10;  }&#10;}" description="StateNotifierのテンプレ" toReformat="false" toShortenFQNames="true">
     <variable name="NAME_SNAKE" expression="snakeCase(regularExpression(capitalize(camelCase(fileNameWithoutExtension())), &quot;Controller&quot;, &quot;&quot;))" defaultValue="" alwaysStopAt="false" />
     <variable name="NAME" expression="regularExpression(capitalize(camelCase(fileNameWithoutExtension())), &quot;Controller&quot;, &quot;&quot;)" defaultValue="" alwaysStopAt="false" />
     <context>
