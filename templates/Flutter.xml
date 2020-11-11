@@ -80,7 +80,7 @@
       <option name="DART_TOPLEVEL" value="true" />
     </context>
   </template>
-  <template name="statenotifier" value="import 'package:flutter/foundation.dart';&#10;import 'package:freezed_annotation/freezed_annotation.dart';&#10;&#10;import '$NAME_SNAKE$_state.dart';&#10;&#10;class $NAME$Controller extends StateNotifier&lt;$NAME$State&gt; {&#10;  $NAME$Controller() : super($NAME$State()) {&#10;    $END$&#10;  }&#10;}" description="StateNotifierのテンプレ" toReformat="false" toShortenFQNames="true">
+  <template name="statenotifier" value="import 'package:hooks_riverpod/all.dart';&#10;&#10;import '$NAME_SNAKE$_state.dart';&#10;&#10;class $NAME$Controller extends StateNotifier&lt;$NAME$State&gt; {&#10;  $NAME$Controller() : super(const $NAME$State());&#10;  &#10;  $END$&#10;}" description="StateNotifierのテンプレ" toReformat="false" toShortenFQNames="true">
     <variable name="NAME_SNAKE" expression="snakeCase(regularExpression(capitalize(camelCase(fileNameWithoutExtension())), &quot;Controller&quot;, &quot;&quot;))" defaultValue="" alwaysStopAt="false" />
     <variable name="NAME" expression="regularExpression(capitalize(camelCase(fileNameWithoutExtension())), &quot;Controller&quot;, &quot;&quot;)" defaultValue="" alwaysStopAt="false" />
     <context>
@@ -88,12 +88,6 @@
     </context>
   </template>
   <template name="testWithMain" value="import 'package:test/test.dart';&#10;&#10;void main() {&#10;  test('$END$', () async {&#10;  });&#10;}&#10;" description="Unitテスト全体のテンプレ" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="DART" value="true" />
-    </context>
-  </template>
-  <template name="pushwithstatenotifier" value="Navigator.of(context).push(&#10;  MaterialPageRoute(&#10;    builder: (_) =&gt; StateNotifierProvider&lt;$NAME$Controller, $NAME$State&gt;(&#10;      create: (_) =&gt; $NAME$Controller(),&#10;      child: const $NAME$Page(),&#10;    ),&#10;    settings: RouteSettings(name: $NAME$Page.routeName),&#10;  ),&#10;);&#10;" description="StateNotifierProviderで包んでPushする" toReformat="false" toShortenFQNames="true">
-    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="DART" value="true" />
     </context>
