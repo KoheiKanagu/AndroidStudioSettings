@@ -8,5 +8,6 @@
     <entry key="dart.server.additional.arguments" value="--enable-completion-model" />
     <entry key="ide.new.welcome.screen.force" value="true" />
     <entry key="debugger.watches.in.variables" value="false" />
+    <entry key="external.system.auto.import.disabled" value="true" />
   </component>
 </application>
