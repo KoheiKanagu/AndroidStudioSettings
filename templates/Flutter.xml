@@ -123,9 +123,4 @@
       <option name="DART" value="true" />
     </context>
   </template>
-  <template name="logger" value="import 'package:flutter/foundation.dart';&#10;import 'package:firebase_crashlytics/firebase_crashlytics.dart';&#10;import 'package:logger/logger.dart';&#10;&#10;const appEnv = String.fromEnvironment('APP_ENV', defaultValue: '');&#10;&#10;final logger = Logger(&#10;  output: ConsoleOutputWithCrashlytics(),&#10;  printer: PrettyPrinter(&#10;    colors: false,&#10;    printTime: true,&#10;  ),&#10;);&#10;&#10;class ConsoleOutputWithCrashlytics extends LogOutput {&#10;  @override&#10;  void output(OutputEvent event) {&#10;    if (appEnv == 'prod' &amp;&amp; kReleaseMode) {&#10;      switch (event.level) {&#10;        case Level.nothing:&#10;        case Level.verbose:&#10;        case Level.debug:&#10;        case Level.info:&#10;          break;&#10;        case Level.warning:&#10;        case Level.error:&#10;        case Level.wtf:&#10;          event.lines.forEach(print);&#10;          break;&#10;      }&#10;    } else {&#10;      event.lines.forEach(print);&#10;    }&#10;    if (Firebase.apps.isNotEmpty) {&#10;      FirebaseCrashlytics.instance&#10;          .log(event.lines.join('\n').replaceAll('┄', '').replaceAll('─', ''));&#10;    }&#10;  }&#10;}" description="Loggerのセットアップ" toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="DART" value="true" />
-    </context>
-  </template>
 </templateSet>
