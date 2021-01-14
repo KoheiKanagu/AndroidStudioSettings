@@ -9,8 +9,8 @@
       <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
       <mapping pattern="pull_request" type="PLAIN_TEXT" />
       <mapping ext="plist" type="PLAIN_TEXT" />
-      <mapping ext="xcconfig" type="PLAIN_TEXT" />
       <mapping ext="md" type="PLAIN_TEXT" />
+      <mapping ext="xcconfig" type="PLAIN_TEXT" />
       <mapping ext="apns" type="PLAIN_TEXT" />
       <mapping pattern="deployFirebaseiOS" type="Shell Script" />
     </extensionMap>
