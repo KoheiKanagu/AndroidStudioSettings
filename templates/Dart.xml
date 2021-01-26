@@ -5,4 +5,10 @@
       <option name="DART" value="true" />
     </context>
   </template>
+  <template name="enum" value="import 'package:freezed_annotation/freezed_annotation.dart';&#10;&#10;enum $NAME$ {&#10;  unknown,&#10;  $END$&#10;}&#10;&#10;class $NAME$Converter&#10;    implements JsonConverter&lt;$NAME$, String&gt; {&#10;  const $NAME$Converter();&#10;&#10;  static const defaultValue = $NAME$.unknown;&#10;&#10;  @override&#10;  $NAME$ fromJson(String json) {&#10;    switch (json) {&#10;      case '0':&#10;        return $NAME$.unknown;&#10;    }&#10;    return defaultValue;&#10;  }&#10;&#10;  @override&#10;  String toJson($NAME$ object) {&#10;    switch (object) {&#10;    }&#10;&#10;    throw FallThroughError();&#10;  }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="capitalize(camelCase(fileNameWithoutExtension())) " defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
 </templateSet>
