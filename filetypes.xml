@@ -12,7 +12,7 @@
       <mapping ext="md" type="PLAIN_TEXT" />
       <mapping ext="xcconfig" type="PLAIN_TEXT" />
       <mapping pattern="deployFirebaseiOS" type="Shell Script" />
-      <removed_mapping pattern=".analysis_options" type="YAML" />
+      <mapping pattern=".analysis_options" type="YAML" />
     </extensionMap>
   </component>
 </application>
