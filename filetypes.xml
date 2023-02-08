@@ -3,16 +3,19 @@
     <extensionMap>
       <mapping ext="gradle.kts" type="Kotlin" />
       <mapping ext="main.kts" type="Kotlin" />
-      <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
-      <mapping pattern="fetchFirebaseAppConfiguration" type="PLAIN_TEXT" />
       <mapping pattern="pull_request" type="PLAIN_TEXT" />
+      <mapping pattern="fetchFirebaseAppConfiguration" type="PLAIN_TEXT" />
       <mapping pattern="pull_request.yml" type="PLAIN_TEXT" />
+      <mapping pattern=".gitkeep" type="PLAIN_TEXT" />
       <mapping ext="plist" type="PLAIN_TEXT" />
       <mapping ext="apns" type="PLAIN_TEXT" />
       <mapping ext="md" type="PLAIN_TEXT" />
       <mapping ext="xcconfig" type="PLAIN_TEXT" />
       <mapping pattern="deployFirebaseiOS" type="Shell Script" />
       <mapping pattern=".analysis_options" type="YAML" />
+      <removed_mapping ext="apk" approved="true" type="ARCHIVE" />
+      <removed_mapping ext="md" type="Markdown" />
+      <removed_mapping ext="psd" approved="true" type="Image" />
     </extensionMap>
   </component>
 </application>
